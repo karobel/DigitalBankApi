@@ -1,0 +1,55 @@
+## .NET
+bin/
+obj/
+out/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+*.DotSettings.user
+
+## User-specific files
+*.rsuser
+*.userprefs
+
+## Secrets — never commit real connection strings or JWT keys
+appsettings.*.local.json
+*.pfx
+secrets.json
+
+## Test results
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+coverage/
+
+## Misc OS files
+.DS_Store
+Thumbs.db
+
+## Docker
+docker-compose.override.yml
+
+## Environment files
+.env
+.env.local
