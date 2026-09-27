@@ -99,8 +99,19 @@ var app = builder.Build();
 // Apply pending EF Core migrations automatically on startup
 using (var scope = app.Services.CreateScope())
 {
+    var logger = scope.ServiceProvider.GetRequiredService<ILogger<Program>>();
     var db = scope.ServiceProvider.GetRequiredService<DigitalBank.Infrastructure.Data.BankDbContext>();
-    db.Database.Migrate();
+    try
+    {
+        logger.LogInformation("Applying database migrations...");
+        db.Database.Migrate();
+        logger.LogInformation("Database migrations applied successfully.");
+    }
+    catch (Exception ex)
+    {
+        logger.LogError(ex, "Failed to apply database migrations.");
+        throw;
+    }
 }
 
 // ───────────────────────── Middleware pipeline ─────────────────────────
