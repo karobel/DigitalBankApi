@@ -1,5 +1,6 @@
 using System.Text;
 using DigitalBank.Api.Middleware;
+using Microsoft.EntityFrameworkCore;
 using DigitalBank.Application.Interfaces;
 using DigitalBank.Application.Services;
 using DigitalBank.Application.Validators;
