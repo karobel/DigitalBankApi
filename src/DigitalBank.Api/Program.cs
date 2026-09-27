@@ -96,6 +96,13 @@ builder.Services.AddHealthChecks()
 
 var app = builder.Build();
 
+// Apply pending EF Core migrations automatically on startup
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<DigitalBank.Infrastructure.Data.BankDbContext>();
+    db.Database.Migrate();
+}
+
 // ───────────────────────── Middleware pipeline ─────────────────────────
 
 app.UseMiddleware<ExceptionHandlingMiddleware>();
