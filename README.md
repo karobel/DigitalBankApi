@@ -9,6 +9,8 @@ This project reflects the kind of backend work I do professionally in the bankin
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+**Live demo:** https://digitalbankapi-production.up.railway.app
+
 ---
 
 ## ✨ Features
@@ -223,6 +225,3 @@ DigitalBankApi/
 
 ---
 
-## 📄 License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
